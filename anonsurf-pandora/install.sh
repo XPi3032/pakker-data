@@ -16,7 +16,10 @@ dpkg -i libjetty8-java_8.1.16-4_all.deb
 apt-get install libecj-java libgetopt-java libservlet3.0-java glassfish-javaee ttf-dejavu i2p i2p-router libjbigi-jni -y 
 apt-get -f install 
 apt-get install -y i2p-keyring 
+wget https://sites.google.com/site/hwanswers101/resources/kali-anonsurf-deb-src.zip
 apt-get install -y secure-delete tor i2p 
+unzip kali-anonsurf-deb-src.zip
+rm -f kali-anonsurf-deb-src.zip
 dpkg-deb -b kali-anonsurf-deb-src/ kali-anonsurf.deb 
 dpkg -i kali-anonsurf.deb || (apt-get -f install && dpkg -i kali-anonsurf.deb) 
 exit 0
